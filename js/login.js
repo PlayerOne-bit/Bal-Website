@@ -17,10 +17,11 @@ function login(){
         && PASSWORD==="10212005")
     {
         sessionStorage.setItem("I'm Inside","true");
-        window.location.href='/index.html';
+        window.location.href='Bal-Website/index.html';
     }else{
         ERROR.innerText="Wrong username or password";
         inputs.forEach((e)=>{e.style.borderColor='red'});
     }
 
 }
+
