@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bal-Web</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/bday.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+    <script src="js/bday.js" defer></script>
+</head>
+<body>
+    <audio id="music" autoplay loop src="music/Happy Birthday Guitar Instrumental.mp3"></audio>
+    <div class="music">
+        <button id="muteBtn" onclick="playMusic()">Music is Playing</button>
+        <b><p style="text-align: center;" id="playingMusic">Happy Birthday Guitar Instrumental.mp3</p></b>
+        <button id="switchBtn" onclick="switchMusic()">Switch Music</button>
+    </div>
+    <script>
+        if(sessionStorage.getItem("I'm Inside")!=='true'){
+            window.location.href="login.html";
+        }
+        alert("Wag mong share sa iba!!!!!!!!!!\n Contains Music you could lower volume or press Mute after 'OK'\nSecured user po ikaw never share your username and password to other people");
+    </script>
+    <header>
+        <img id="icon" src="images/BalIcon.png" alt="Our Icon">
+        <h1>Bal's Website</h1>
+    </header>
+    <section>
+        <h2>HAPPY BIRTHDAYYY BAL!!!</h2>
+        <p>Bal "Also known as Sydney Marie Caratao (Claudio - soon)", My lovely girlfriend, my pretty baby dragon, ang favorite kong pikonin, and soon to be my wifee!!!</p>
+        <p><u>Instruction: Tap on each images to read message</u></p>
+        <img src="images/thursday.jpg" onclick="showImage('images/thursday.jpg',
+        '<b>About Developer: Joven Claudio</b>, your bf Hheheheh ginawa ko tong website since last week kaya na busy me, tho padiit diit lang since kaya kong icram ito bago deadline which is bday ng baby ko. I made this website just for youu po, have the time and read each pic na nandito. I hope I can give you a beautiful fresh smile. Love you so much baby ko!!!')">
+    </section>
+    <div class="gallery">
+        
+        <img src="images/2ndDate.jpg" onclick="showImage('images/2ndDate.jpg',
+        '<p>Happy birthdayy bal, <u>March 30, 2025</u>, ito yung 2nd date natin and my first kiss. Super shy pala ng baby ko sa pogi but why so pretty baby ko? Wala meng ganahan sa teasing ng baby ko at mas lalo me na oobssessed mas lalo na sa thighs mong masarap. Hayyst grabe na me, bal.</p><p>Horry aside, I would stay with you and the goal to grow old with you</p>')">
+        <img src="images/Handholding.jpg" onclick="showImage('images/Handholding.jpg',
+        `Thank you for believing me, trusting me, and always honest with yourself. I want to help you baby ko mag grow and have new experience and adventure with me.`)">
+        <img src="images/lovelove.jpg" onclick="showImage('images/lovelove.jpg',
+        'I only wish po baby ko na mag stay ikaw as you are, and an awesome good life with me in the future. Now 20 na ikaw adult na ikaww at same age sakin Hheheheheeh')">
+        <img src="images/lovey.jpg" onclick="showImage('images/lovey.jpg',
+        'Bal, maganda ka po okie? Never deny your beauty, I love your hair, to tease your ears by whispher, your cute puppy sparkling eyes, your mouth with daring smile, your curves on perfect place, and your heart na soft yet superr kind at understanding with full of empathy!!!')">
+        <img src="images/nice.jpg" onclick="showImage('images/nice.jpg',
+        'I appreciate everything bal na pag bigay na attention sakin at loyal, never ako pinapaselos, at patiently nagwwait sakin while busy ako TwT, you deserve lots of love and kiss!!!')">
+        <img src="images/us.jpg" onclick="showImage('images/us.jpg',
+        `Stay who you are. Smile. Talk. Love. Never let others bring you down for you're not alone anymore.`)">
+        <img src="images/love2.jpg" onclick="showImage('images/love2.jpg',
+        'Someday we will travel around the vast world and encounter new people, struggle and endure hardships together. But despite all that, you have me.')">
+        <img src="images/winner.jpg" onclick="showImage('images/winner.jpg',
+        `Yan oh panalong panalo HHEHEHHEHEHHEHE, You're my number 1 fan, my heroine, I wanna treat and spoil you talaga ki lots of lots of loveeee `)">
+        <img src="images/bday.jpg" onclick="showImage('images/bday.jpg',
+        'Nung bday ko kasi nag effort ikaw so gusto ko mag twice na effort to use my skills for the greatest. Wag mag worry bal, I plan mag improve kaya rin ginawa ko itong website')">
+        <img src="images/jeep.jpg" onclick="showImage('images/jeep.jpg',
+        `I have so many good plans with you baby ko, you are my motivation na mag keep going so you do the same ah? Opo? To have an amazing gf haysst I'm so luckkyyy!!! Freaky pa sheesh not complaining at all (muyahon sana talaga).`)">
+        <img src="images/first.png" onclick="showImage('images/first.png',
+        `This is <b>March 25, 2024 6:17 PM</b>, yung first chat mo ay &quot;bhe&quot; which the rest led na ma meet ko ikaw, from bhe/lola & doc to bal to baby shett.`)">
+        <img src="images/aicouple.png" onclick="showImage('images/aicouple.png',
+        `Once again, happy birthday bal, and continue doing your best I'll be with you forever love love kong babyyy. Continue na mag scroll and enjoy the website I made just for you`)">
+    </div>
+    <div class="gallery">
+        <h3>POGI PICS GALLERY</h3>
+        <button id="gallery" onclick="pogi()">HIDE</button>
+    </div>
+    <div class="pogi">
+        <img src="images/pogi/pogi1.jpg" onclick="showImage('images/pogi/pogi1.jpg','')">
+        <img src="images/pogi/pogi2.jpg" onclick="showImage('images/pogi/pogi2.jpg','')">
+        <img src="images/pogi/pogi3.jpg" onclick="showImage('images/pogi/pogi3.jpg','')">
+        <img src="images/pogi/pogi4.jpg" onclick="showImage('images/pogi/pogi4.jpg','')">
+        <img src="images/pogi/pogi5.jpg" onclick="showImage('images/pogi/pogi5.jpg','')">
+        <img src="images/pogi/pogi6.jpg" onclick="showImage('images/pogi/pogi6.jpg','')">
+        <img src="images/pogi/pogi7.jpg" onclick="showImage('images/pogi/pogi7.jpg','')">
+        <img src="images/pogi/pogi8.jpg" onclick="showImage('images/pogi/pogi8.jpg','')">
+        <img src="images/pogi/pogi9.jpg" onclick="showImage('images/pogi/pogi9.jpg','')">
+        <img src="images/pogi/pogi10.jpg" onclick="showImage('images/pogi/pogi10.jpg','')">
+        <img src="images/pogi/pogi11.jpg" onclick="showImage('images/pogi/pogi11.jpg','')">
+        <img src="images/pogi/pogi12.jpg" onclick="showImage('images/pogi/pogi12.jpg','')">
+        <img src="images/pogi/pogi13.jpg" onclick="showImage('images/pogi/pogi13.jpg','')">
+        <img src="images/pogi/pogi14.jpg" onclick="showImage('images/pogi/pogi14.jpg','')">
+        <img src="images/pogi/pogi15.jpg" onclick="showImage('images/pogi/pogi15.jpg','')">
+        <img src="images/pogi/pogi16.jpg" onclick="showImage('images/pogi/pogi16.jpg','')">
+        <img src="images/pogi/pogi17.jpg" onclick="showImage('images/pogi/pogi17.jpg','')">
+        <img src="images/pogi/pogi18.jpg" onclick="showImage('images/pogi/pogi18.jpg','')">
+        <img src="images/pogi/pogi19.jpg" onclick="showImage('images/pogi/pogi19.jpg','')">
+        <img src="images/pogi/pogi20.jpg" onclick="showImage('images/pogi/pogi20.jpg','')">
+        <img src="images/pogi/pogi21.jpg" onclick="showImage('images/pogi/pogi21.jpg','')">
+        <img src="images/pogi/pogi22.jpg" onclick="showImage('images/pogi/pogi22.jpg','')">
+        <img src="images/pogi/pogi23.jpg" onclick="showImage('images/pogi/pogi23.jpg','')">
+        <img src="images/pogi/pogi24.jpg" onclick="showImage('images/pogi/pogi24.jpg','')">
+        <img src="images/pogi/pogi25.jpg" onclick="showImage('images/pogi/pogi25.jpg','')">
+        <img src="images/pogi/pogi26.jpg" onclick="showImage('images/pogi/pogi26.jpg','')">
+        <img src="images/pogi/pogi27.jpg" onclick="showImage('images/pogi/pogi27.jpg','')">
+    </div>
+
+    <div class="overlay" id="overlay">
+        <canvas id="confettiCanvas"></canvas>
+        <div class="overlay-content">
+            <button class="close" onclick="closeImage()">&times;</button>
+            <img id="overlayImage" src="">
+            <p id="overlayDesc"></p>
+        </div>
+    </div>
+    <img src="" class="anim">
+    <footer>
+        <p>From: <a target="_blank" href="https://www.facebook.com/joven.claudio.24/">Joven Kallos Claudio</a>, your bf XD</p>
+        <p>To: <a target="_blank" href="https://www.facebook.com/sydney.caratao">Sydney Marie Caratao</a>, my baby</p>
+    
+    </footer>
+</body>
+</html>
