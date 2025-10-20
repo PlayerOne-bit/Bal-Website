@@ -1,0 +1,168 @@
+header{
+    background-color: black;
+}
+body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding-top: 25%;
+    background-image: linear-gradient(135deg, #654ea3, #eaafc8);
+    background-size: cover;
+}
+section{
+    margin: 0 5%;
+    text-align: center;
+    img{
+        margin: 0 10%;
+        width: 65%;
+        object-fit: cover;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 10%;
+}
+.gallery img {
+    margin: 1%;
+    object-fit: cover;
+    width: 40%;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.gallery img:hover , section img:hover,.pogi img:hover{
+    transform: scale(1.05);
+}
+.overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #a18cd188, #fbc2eb77);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+    overflow: hidden;
+}
+.overlay-content {
+    position: relative;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+#overlayImage{
+    width: 60%;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 10px;
+    animation: zoomIn 0.5s ease-in-out;
+}
+#overlayDesc {
+    background-color: rgb(255, 63, 255);
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+    z-index:9999;
+    margin: 0 5%;
+    
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: black;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+#confettiCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: 1;
+}
+@keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.anim{
+    width:150px;
+    display:none;
+    position:fixed; 
+    z-index: 999;
+    transition: all 0.5s ease;
+    border-radius: 20%;
+}
+.anim.show{
+    display:block;
+    opacity: 0.75;
+}
+
+footer{
+    margin-top: 5%;
+    padding: 10px;
+    background-image: linear-gradient(to right, rgb(75, 0, 0),red);
+    color:white;
+    a,a:visited{
+        padding:10px;
+        color:rgb(102, 255, 0);
+    }
+    a:hover{
+        color: pink;
+        background-color: purple;
+    }
+}
+@media (min-width:768px) {
+    body{padding-top: 10%;}
+}
+.music{
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.music button, #gallery{
+    background-color: purple;
+    color: white;
+    border-radius: 10px;
+    padding:10px;
+    margin: 5% 0;
+}
+
+.pogi{
+    display: none;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    margin: 5%;
+}
+.pogi.show{
+    display: grid;
+}
+
+
+
+.pogi img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
