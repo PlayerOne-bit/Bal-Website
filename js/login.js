@@ -17,7 +17,7 @@ function login(){
         && PASSWORD==="10212005")
     {
         sessionStorage.setItem("I'm Inside","true");
-        window.location.href='./Bal-Website/';
+        window.location.href='./index.html/';
     }else{
         ERROR.innerText="Wrong username or password";
         inputs.forEach((e)=>{e.style.borderColor='red'});
