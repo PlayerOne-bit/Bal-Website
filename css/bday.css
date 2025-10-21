@@ -61,7 +61,7 @@ section{
     animation: zoomIn 0.5s ease-in-out;
 }
 #overlayDesc {
-    background-color: rgb(255, 63, 255);
+    background-color: white;
     border-radius: 10px;
     padding: 10px;
     position: relative;
