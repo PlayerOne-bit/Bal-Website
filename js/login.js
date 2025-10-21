@@ -13,9 +13,8 @@ function login(){
 
     if((USERNAME==="Sydney Caratao" || 
         USERNAME==='Sydney Marie Caratao' ||
-        USERNAME==='Sydney Marie Caratao Claudio'||
-USERNAME==='Sydney') 
-        && (PASSWORD==="10212005" || PASSWORD==='1021')
+        USERNAME==='Sydney Marie Caratao Claudio') 
+        && (PASSWORD==="10212005")
     {
         sessionStorage.setItem("I'm Inside","true");
         window.location.href='./index.html';
